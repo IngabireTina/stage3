@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+    <div class="app-title">
+        <div>
+          <h1><i class="fa fa-th-list"></i>Huye District</h1>
+          <p>Delete Confirmation</p>
+        </div>
+    </div>
+    <hr>
+<p>Are you sure you want to delete the "{{ form }}"</p>
+    <hr>
+    <form action="{% url 'deletestock' form.id %}" method="POST">
+     {% csrf_token %}
+    <a href="{% url 'allstock' %}">cancel</a>
+         <input type="submit" name="submit">
+ </form>
+
+{% endblock %}

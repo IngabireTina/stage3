@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+{% block content %}
+{% load static %}
+    <div class="app-title">
+        <div>
+          <h1><i class="fa fa-th-list"></i>Huye District</h1>
+          <p>Delete Address Confirmation</p>
+        </div>
+    </div>
+    <hr>
+<p>Are you sure you want to delete the "{{ form }}"</p>
+    <form action="{% url 'delete_address' form.id %}" method="POST">
+     {% csrf_token %}
+    <a href="{% url 'address' %}"></a>
+    <input type="submit" name="submit">
+ </form>
+
+{% endblock %}

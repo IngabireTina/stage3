@@ -1,0 +1,96 @@
+{% load static %}
+{% block content %}
+<ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                                <div id="submenu-1" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'dashboard1' %}">Dashboard1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="">Dashboard2</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'allstock' %}" ><i class="fa fa-fw fa-rocket"></i>Manage Stock</a>
+                                <div id="submenu-2" class="collapse submenu" style="">
+
+                                </div>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>Manage IT Mateials</a>
+                                <div id="submenu-4" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'recorditem'  %}">Record Item</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="">Update Item</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="">Delete Item</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-5" aria-controls="submenu-5"><i class="fas fa-fw fa-table"></i>Tables</a>
+                                <div id="submenu-5" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'users' %}">Manager User</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'address' %}">Manager Address</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-divider">
+                                Features
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-6" aria-controls="submenu-6"><i class="fas fa-fw fa-file"></i> Settings </a>
+                                <div id="submenu-6" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'logout' %}">Sign Out</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                           {{ request.user }}
+                                            <a class="nav-link" href="{% url 'register' %} ">Sign up Page</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-9" aria-controls="submenu-9"><i class="fas fa-fw fa-map-marker-alt"></i>Maps</a>
+                                <div id="submenu-9" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/map-google.html">Map1</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="pages/map-vector.html">Map2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+{% endblock %}
